@@ -9,6 +9,7 @@
 body {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 header {
     padding: 10px;
@@ -20,10 +21,12 @@ header img {
 header p {
     float: right;
     padding-top: 10px;
+    letter-spacing: 5px;
 }
 
 nav .nav ul {
     list-style-type: none;
+    overflow: hidden;
 }
 
 nav .nav ul li{
@@ -40,6 +43,7 @@ nav .nav ul li a {
     color: white;
     text-decoration: none;
     padding: 16px;
+    letter-spacing: 1px;
 }
 
 
@@ -49,7 +53,7 @@ nav .nav ul li a:hover {
     /* border: 0.5px solid white; */
 }
 
-nav .nav ul li {
+nav .nav ul li::after {
     content: "";
     display: block;
     clear: both;
@@ -196,8 +200,20 @@ section .right {
     color: black;
 }
 
+.right .text {
+    border-left: 5px solid rgb(56, 173, 27);
+    padding: 8px 16px;
 
+}
 
+.right .text p {
+    font-size: 16px;
+    margin: 8px;
+}
 
-
-
+.tag { color: sienna; }
+.value { color: blue; }
+.attr {
+    color: red;
+    margin-left: 48px;
+}
